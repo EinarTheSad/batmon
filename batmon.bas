@@ -48,9 +48,11 @@ sub charge(col as integer)
 end sub
 
 ScreenControl GET_DESKTOP_SIZE, resx, resy
-ScreenRes 33, 20, 8, , GFX_NO_FRAME
+ScreenRes 33, 20, 8, , (GFX_SHAPED_WINDOW or GFX_ALWAYS_ON_TOP)
+
 ScreenControl SET_WINDOW_POS, resx-33, 0
-Paint(0,0),8
+Palette 16, &h00000000
+Paint(0,0),16
 
 'battery shape
 Line (5,4)-(25,4), 15
@@ -58,6 +60,7 @@ Line (5,15)-(25,15), 15
 Line (4,5)-(4,14), 15
 Line (26,5)-(26,14), 15
 Line (27,7)-(28,12), 15, BF
+Paint(7,7),8,15
 
 'reading values and displaying the icon
 Do
