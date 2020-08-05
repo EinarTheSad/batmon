@@ -78,15 +78,15 @@ Do
 		end if
     end if
     cells = percentage / 25
-	if status = "discharging" then
+	if status = "Discharging" then
 		charge(8)
 		celldraw(cells)
 	end if
-	if status = "charging" then
+	if status = "Charging" then
 		celldraw(cells)
 		charge(yellow)
 	end if
-	if status = "charged" then
+	if status = "Charged" then
 		celldraw(cells)
 		charge(15)
 	end if
