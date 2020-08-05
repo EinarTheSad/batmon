@@ -60,10 +60,10 @@ Line (5,15)-(25,15), 15
 Line (4,5)-(4,14), 15
 Line (26,5)-(26,14), 15
 Line (27,7)-(28,12), 15, BF
-Paint(7,7),8,15
 
 'reading values and displaying the icon
 Do
+	Paint(7,7),8,15
 	var f = FreeFile
 	open "/sys/class/power_supply/battery/capacity" for input as #f
 	input #f, percentage
